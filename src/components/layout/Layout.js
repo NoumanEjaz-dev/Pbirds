@@ -1,11 +1,11 @@
+import { Drawer } from "@material-ui/core";
 import Navbar from "./Navbar";
 
 const Layout = ({ children }) => {
   return (
     <>
-      <header>
-        <Navbar />
-      </header>
+      <Navbar />
+      {/* <Drawer /> */}
       <main>{children}</main>
     </>
   );

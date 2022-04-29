@@ -9,7 +9,7 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Hidden } from "@material-ui/core";
 import Btn from "@material-ui/core/Link";
-
+import TemporaryDrawer from "../drawer/Drawer";
 const useStyles = makeStyles((theme) => ({
   root: {
     "& .MuiToolbar-regular": {
@@ -59,6 +59,20 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Navbar() {
   const classes = useStyles();
+ const [state, setState] = React.useState({
+   left: false,
+ });
+
+ const toggleDrawer = (anchor, open) => (event) => {
+   if (
+     event.type === "keydown" &&
+     (event.key === "Tab" || event.key === "Shift")
+   ) {
+     return;
+   }
+
+   setState({ ...state, [anchor]: open });
+ };
 
   return (
     <div className={classes.root}>
@@ -95,12 +109,14 @@ export default function Navbar() {
               className={classes.menuButton}
               color="inherit"
               aria-label="menu"
+              onClick={toggleDrawer("left", true)}
             >
               <MenuIcon />
             </IconButton>
           </Hidden>
         </Toolbar>
       </AppBar>
+      <TemporaryDrawer toggleDrawer={toggleDrawer} isOpen={state["left"]} />
     </div>
   );
 }

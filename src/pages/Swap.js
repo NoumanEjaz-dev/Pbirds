@@ -1,8 +1,4 @@
 const Swap = () => {
-    return (
-        <>
-        swap page
-        </>
-    )
+  return <>swap page</>;
 };
 export default Swap;

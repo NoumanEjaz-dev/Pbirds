@@ -1,8 +1,6 @@
 import React from "react";
-import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
-import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
@@ -14,14 +12,10 @@ const useStyles = makeStyles({
   list: {
     width: 250,
   },
-  fullList: {
-    width: "auto",
-  },
 });
 
-export default function TemporaryDrawer({toggleDrawer,isOpen}) {
+export default function TemporaryDrawer({ toggleDrawer, isOpen }) {
   const classes = useStyles();
-  
 
   const list = (anchor) => (
     <div
@@ -46,7 +40,7 @@ export default function TemporaryDrawer({toggleDrawer,isOpen}) {
   return (
     <div>
       <React.Fragment>
-        <Button onClick={toggleDrawer("left", true)}>left</Button>
+        {/* <Button onClick={toggleDrawer("left", true)}>left</Button> */}
         <Drawer
           anchor={"left"}
           open={isOpen}

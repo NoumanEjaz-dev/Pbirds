@@ -6,7 +6,7 @@ const theme = createTheme({
       yellow: "#D09A0A",
       green: "#309916",
       dark: "#000000",
-      lightDark:"#111111"
+      lightDark: "#111111",
     },
   },
 });

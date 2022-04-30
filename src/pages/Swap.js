@@ -1,8 +1,9 @@
-const Swap = () => {
-    return (
-        <>
-        swap page
-        </>
-    )
+const SwapPage = () => {
+  return (
+    <>
+      <h1>SwapdPage</h1>
+    </>
+  );
 };
-export default Swap;
+
+export default SwapPage;

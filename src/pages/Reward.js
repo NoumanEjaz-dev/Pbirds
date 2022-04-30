@@ -86,10 +86,10 @@ const RewardPage = () => {
           <Grid item xs={12} lg={6} spacing={3}>
             <ChartGraph />
           </Grid>
-          <Grid item xs={6} lg={3} spacing={3}>
+          <Grid item xs={12} sm={6} lg={3} spacing={3}>
             <CardBox />
           </Grid>
-          <Grid item xs={6} lg={3} spacing={3}>
+          <Grid item xs={12} sm={6} lg={3} spacing={3}>
             <MainCard>
               <img
                 className={classes.JoinImage}
@@ -106,7 +106,7 @@ const RewardPage = () => {
         </Grid>
         {/*  */}
         <Grid container spacing={2}>
-          <Grid item xs={6} lg={3} spacing={3}>
+          <Grid item xs={12} sm={6} lg={3} spacing={3}>
             <MainCard>
               <div>
                 <div className={classes.RewardCard}>

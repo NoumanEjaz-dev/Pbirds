@@ -1,22 +1,20 @@
-// import { makeStyles } from "@material-ui/core";
 import Layout from "./components/layout/Layout";
+import HomePage from "./pages/Home";
+import SwapPage from "./pages/Swap";
+import RewardPage from "./pages/Reward";
+import NotFoundPage from "./pages/NotFound";
 import { Routes, Route } from "react-router-dom";
-import Reward from "./pages/Reward";
-import Swap from "./pages/Swap";
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     color: theme.palette.common.lightDark
-//   },
-// }));
+
 function App() {
   return (
     <div>
-      <Layout></Layout>
-      {/*  */}
       <Routes>
-        <Route path="/" element={<Reward />}></Route>
-        <Route path="/reward" element={<Reward />}></Route>
-        <Route path="/swap" element={<Swap />}></Route>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="swap" element={<SwapPage />} />
+          <Route path="Reward" element={<RewardPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
       </Routes>
     </div>
   );

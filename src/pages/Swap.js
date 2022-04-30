@@ -1,17 +1,9 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core";
-
-const useStyles = makeStyles((theme) => ({
-  h1: {
-    color: "#fff",
-  },
-}));
-export default function Swap() {
-  const classes = useStyles();
-
+const SwapPage = () => {
   return (
     <>
-      <h1 className={classes.h1}>Swap page</h1>
+      <h1>SwapdPage</h1>
     </>
   );
-}
+};
+
+export default SwapPage;

@@ -40,7 +40,6 @@ export default function TemporaryDrawer({ toggleDrawer, isOpen }) {
   return (
     <div>
       <React.Fragment>
-        {/* <Button onClick={toggleDrawer("left", true)}>left</Button> */}
         <Drawer
           anchor={"left"}
           open={isOpen}

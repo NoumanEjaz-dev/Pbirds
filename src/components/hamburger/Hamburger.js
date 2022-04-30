@@ -14,8 +14,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 }));
-const HamBurger = ({toggleDrawer}) => {
-    const classes = useStyles();
+const HamBurger = ({ toggleDrawer }) => {
+  const classes = useStyles();
   return (
     <IconButton
       edge="start"

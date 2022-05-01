@@ -1,11 +1,12 @@
 import { makeStyles, createStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import { Box, Button } from "@material-ui/core";
 import ChartGraph from "../components/charts/ChartGraph";
 import CardBox from "../components/card/CardBox";
 import MainCard from "../components/box/MainCard";
-import CommunityImage from "../assest/images/JoinOurCommunity.png";
+import JoinCard from "../components/joinCard/JoinCard";
+import CardToken from "../components/cardToken/CardToken";
 import profile from "../assest/images/profile.png";
+
 const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
@@ -15,63 +16,6 @@ const useStyles = makeStyles((theme) =>
     },
     paper: {
       padding: theme.spacing(2),
-    },
-    JoinCommunityTitle: {
-      color: theme.palette.common.white,
-      fontFamily: "Roboto",
-    },
-    JoinCommunityText: {
-      fontFamily: "Roboto",
-      fontSize: "12px",
-      color: theme.palette.common.white,
-      // margin: "9px",
-    },
-    JoinButton: {
-      backgroundColor: "#2B2B2B",
-      borderRadius: "10px",
-      color: theme.palette.common.white,
-      marginTop: "10px",
-      width: "100%",
-    },
-    RewardCard: {
-      display: "flex",
-      justifyContent: "space-between",
-      textAlign: "center",
-    },
-    Title: {
-      display: "flex",
-      alignItems: "center",
-      color: theme.palette.common.white,
-      fontFamily: "Roboto",
-    },
-    RewardClaimed: {
-      color: theme.palette.common.white,
-      fontFamily: "Roboto",
-    },
-    Na: {
-      margin: "10px",
-      color: theme.palette.common.white,
-      fontFamily: "Roboto",
-    },
-    ClaimBtn: {
-      margin: "10px",
-      color: theme.palette.common.white,
-      fontFamily: "Roboto",
-      backgroundColor: "#D09A0A",
-      padding: "10px",
-      "&:hover": {
-        backgroundColor: "#D09A0A",
-      },
-    },
-    TotalEarned: {
-      margin: "10px",
-      color: theme.palette.common.white,
-      fontFamily: "Roboto",
-    },
-    TotalDistributed: {
-      margin: "10px",
-      color: theme.palette.common.white,
-      fontFamily: "Roboto",
     },
   })
 );
@@ -91,38 +35,70 @@ const RewardPage = () => {
           </Grid>
           <Grid item xs={12} sm={6} lg={3} spacing={3}>
             <MainCard>
-              <img
-                className={classes.JoinImage}
-                src={CommunityImage}
-                alt="img"
-              />
-              <p className={classes.JoinCommunityTitle}>Join Our Community</p>
-              <p className={classes.JoinCommunityText}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
-              <Button className={classes.JoinButton}>Join Now</Button>
+              <JoinCard />
             </MainCard>
           </Grid>
         </Grid>
         {/*  */}
         <Grid container spacing={2}>
-          <Grid item xs={12} sm={6} lg={3} spacing={3}>
+          <Grid
+            className={classes.cardItem}
+            item
+            xs={12}
+            sm={6}
+            lg={3}
+            spacing={3}
+          >
             <MainCard>
-              <div>
-                <div className={classes.RewardCard}>
-                  <img src={profile} alt="img" />
-                  <h3 className={classes.Title}>WBNB</h3>
-                </div>
-                <hr />
-                <p className={classes.RewardClaimed}>Reward Not Claimed</p>
-                <p className={classes.Na}>N/A</p>
-                <Button className={classes.ClaimBtn}>Claim Manually</Button>
-                <p className={classes.TotalEarned}>Total Earned (WBNB)</p>
-                <p className={classes.Na}>N/A</p>
-                <p className={classes.TotalDistributed}>
-                  Total (WBNB) Distributed
-                </p>
-              </div>
+              <CardToken
+                image={profile}
+                title="WBNB"
+                text1="Reward Not Claimed"
+                text2="N/A"
+                text3="Total Earned (WBNB)"
+                text4="Total (WBNB) Distributed"
+                btn="Claim Manually"
+              />
+            </MainCard>
+          </Grid>
+          <Grid
+            className={classes.cardItem}
+            item
+            xs={12}
+            sm={6}
+            lg={3}
+            spacing={3}
+          >
+            <MainCard>
+              <CardToken
+                image={profile}
+                title="Y-5 Token"
+                text1="Reward Not Claimed"
+                text2="N/A"
+                text3="Total Earned (Y-5 Token)"
+                text4="Total (Y-5 Token) Distributed"
+                btn="Claim Manually"
+              />
+            </MainCard>
+          </Grid>
+          <Grid
+            className={classes.cardItem}
+            item
+            xs={12}
+            sm={6}
+            lg={3}
+            spacing={3}
+          >
+            <MainCard>
+              <CardToken
+                image={profile}
+                title="Reflecto"
+                text1="Reward Not Claimed"
+                text2="N/A"
+                text3="Total Earned (Reflecto)"
+                text4="Total (Reflecto) Distributed"
+                btn="Claim Manually"
+              />
             </MainCard>
           </Grid>
         </Grid>

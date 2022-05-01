@@ -7,6 +7,8 @@ const theme = createTheme({
       green: "#309916",
       dark: "#000000",
       lightDark: "#111111",
+      white: "#fff",
+      gray: "#808080",
     },
   },
 });

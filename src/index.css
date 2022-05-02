@@ -49,11 +49,6 @@ Copyright (c) 2015 Daniel Eden
   text-align: left;
   text-anchor: start;
 } 
-
-
-
-
-
 .ct-grid {
   stroke: rgb(86 86 86);
   stroke-width: 1px;
@@ -80,10 +75,6 @@ Copyright (c) 2015 Daniel Eden
   stroke-width: 10px;
 } */
 
-/* .ct-slice-donut {
-  fill: none;
-  stroke-width: 60px;
-} */
 
 .ct-series-a .ct-point,
 .ct-series-a .ct-line,

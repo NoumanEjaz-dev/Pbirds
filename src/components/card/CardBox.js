@@ -16,11 +16,13 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: "2px solid #D09A0A",
     color: theme.palette.common.white,
     paddingBottom: "5px",
+    textAlign: "start",
   },
   boldTitle2: {
     borderBottom: "2px solid #D09A0A",
     color: theme.palette.common.white,
     paddingBottom: "5px",
+    textAlign: "start",
   },
   paperBox: {
     display: "flex",

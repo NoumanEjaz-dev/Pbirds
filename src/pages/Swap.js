@@ -1,7 +1,9 @@
+import SwapForm from "../components/swapform/SwapForm";
+
 const SwapPage = () => {
   return (
     <>
-      <h1>SwapdPage</h1>
+      <SwapForm />
     </>
   );
 };

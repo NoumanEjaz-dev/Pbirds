@@ -12,16 +12,30 @@ const Items = [
     title: "Home",
     path: "/home",
     // icon: <HomeIcon color="primary" />
+    icon: (
+      <SvgIcon style={{ color: "white" }}>
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+      </SvgIcon>
+    ),
   },
   {
     title: "Reward",
     path: "/reward",
     // icon: <HomeIcon color="primary" />
+    icon: (
+      <SvgIcon style={{ color: "white" }}>
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+      </SvgIcon>
+    ),
   },
   {
     title: "Swap",
     path: "/swap",
-    // icon:<HomeIcon color="primary" />
+    icon: (
+      <SvgIcon style={{ color: "white" }}>
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+      </SvgIcon>
+    ),
   },
 ];
 
@@ -62,9 +76,7 @@ const DrawerList = ({anchor,toggleDrawer}) => {
             }}
           >
             <ListItemIcon>
-              <SvgIcon style={{color: "#111111"}}>
-                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-              </SvgIcon>
+              {text.icon}
             </ListItemIcon>
             <ListItemText primary={text.title} />
           </ListItem>

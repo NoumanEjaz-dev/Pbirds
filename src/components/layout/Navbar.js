@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Navbar() {
   const classes = useStyles();
   const [state, setState] = React.useState({
-    left: false,
+    left: true,
   });
 
   const toggleDrawer = (anchor, open) => () => {

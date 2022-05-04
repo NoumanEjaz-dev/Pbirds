@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
   saveBtn: {
     marginTop: "15px",
-    padding: "10px 45px",
+    padding: "8px 95px",
     background: theme.palette.common.yellow,
     color: "#fff",
     textAlign: "center",

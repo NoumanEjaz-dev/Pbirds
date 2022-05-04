@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.common.white,
     fontFamily: "Roboto",
     backgroundColor: "#D09A0A",
-    padding: "5px 20px",
+    padding: "8px 70px",
     "&:hover": {
       backgroundColor: "#D09A0A",
     },

@@ -2,8 +2,6 @@ import React from "react";
 import Drawer from "@material-ui/core/Drawer";
 import DrawerList from "./DrawerList";
 
-
-
 export default function TemporaryDrawer({ toggleDrawer, isOpen }) {
   return (
     <div>

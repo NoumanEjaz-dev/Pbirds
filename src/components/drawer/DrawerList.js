@@ -51,14 +51,17 @@ const useStyles = makeStyles({
       color: "#ffffff",
     },
   },
+  SidenavList: {
+    marginTop: "30px",
+  },
 });
 
-const DrawerList = ({anchor,toggleDrawer}) => {
+const DrawerList = ({ anchor, toggleDrawer }) => {
   const classes = useStyles();
   const navigate = useNavigate();
   const routeHandler = (path) => {
-      navigate(path)
-  }
+    navigate(path);
+  };
   return (
     <div
       className={classes.list}
@@ -68,15 +71,14 @@ const DrawerList = ({anchor,toggleDrawer}) => {
       <List>
         {Items.map((text, index) => (
           <ListItem
+            className={classes.SidenavList}
             button
             key={text.title}
             onClick={() => {
               routeHandler(text.path);
             }}
           >
-            <ListItemIcon>
-              {text.icon}
-            </ListItemIcon>
+            <ListItemIcon>{text.icon}</ListItemIcon>
             <ListItemText primary={text.title} />
           </ListItem>
         ))}

@@ -3,6 +3,7 @@ import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import { makeStyles } from "@material-ui/core/styles";
+import logo from "../../assest/logo/logo.png";
 
 const useStyles = makeStyles((theme) => ({
   Dropdpwn: {
@@ -10,8 +11,15 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.common.white,
     width: "100%",
     padding: "16px 10px",
+    background: theme.palette.common.black,
+    "& hover": {
+      background: theme.palette.common.black,
+    },
     // flex: "1",
     // display: "flex",
+  },
+  logo: {
+    width: "10px",
   },
 }));
 
@@ -36,7 +44,9 @@ export default function PbirdDropdownMenu() {
         aria-haspopup="true"
         onClick={handleClick}
       >
-        Pbird
+        <span style={{ alignItems: "center" }}>
+          <img className={classes.logo} src={logo} alt="img" /> Pbird
+        </span>
       </Button>
       <Menu
         id="simple-menu"

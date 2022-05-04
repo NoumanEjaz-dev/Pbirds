@@ -35,8 +35,8 @@ export default function InputFields() {
   const [toCoin, setToCoin] = useState({ name: "PBIRD", value: 0 });
 
   const onChangeHandler = (event) => {
-    console.log(event.target.name,toCoin.name)
-    if(event.target.name=== fromCoin.name){
+    console.log(event.target.name, toCoin.name);
+    if (event.target.name === fromCoin.name) {
       setFromCoin({
         ...fromCoin,
         value: event.target.value,

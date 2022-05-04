@@ -33,22 +33,27 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ExchangeInput =  ({from,balance,coinName,onchange,value}) => {
-    const classes = useStyles()
-    return (
-      <div className={classes.inputFiledBox}>
-        <span className={classes.inputDetail}>
-          {" "}
-          <label>{from}</label>
-          <label>Balance: {balance}</label>
-        </span>
-        <span className={classes.inputText}>
-          {" "}
-          <input className={classes.inpbox} name={coinName} value={value}  onChange={onchange}/>
-          <label>{coinName}</label>
-        </span>
-      </div>
-    )}
-
+const ExchangeInput = ({ from, balance, coinName, onchange, value }) => {
+  const classes = useStyles();
+  return (
+    <div className={classes.inputFiledBox}>
+      <span className={classes.inputDetail}>
+        {" "}
+        <label>{from}</label>
+        <label>Balance: {balance}</label>
+      </span>
+      <span className={classes.inputText}>
+        {" "}
+        <input
+          className={classes.inpbox}
+          name={coinName}
+          value={value}
+          onChange={onchange}
+        />
+        <label>{coinName}</label>
+      </span>
+    </div>
+  );
+};
 
 export default ExchangeInput;

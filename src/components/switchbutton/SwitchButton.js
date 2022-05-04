@@ -4,7 +4,7 @@ import IconButton from "@material-ui/core/IconButton";
 import ImportExportIcon from "@material-ui/icons/ImportExport";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+ root: {
     "& > *": {
       margin: theme.spacing(1),
       backgroundColor: "#1C1C1C",
@@ -18,11 +18,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SwitchButton() {
+export default function SwitchButton({onclick}) {
   const classes = useStyles();
 
   return (
-    <div className={classes.root} style={{ textAlign: "center" }}>
+    <div className={classes.root} style={{ textAlign: "center" }} onClick={onclick}>
       <IconButton aria-label="importExport">
         <ImportExportIcon className={classes.importExportIcon} />
       </IconButton>

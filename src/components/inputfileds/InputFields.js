@@ -1,41 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import SwitchButton from "../switchbutton/SwitchButton";
 import Button from "@material-ui/core/Button";
+import ExchangeInput from "./exchangeInput";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     textAlign: "center",
-  },
-  inputFiledBox: {
-    color: "#fff",
-    background: "#000",
-    display: "grid",
-    padding: "10px 20px 0px 20px",
-    fontFamily: "Roboto",
-    // width: "100%",
-    borderRadius: "5px",
-    border: "1px solid #fff",
-    textAlign: "center",
-  },
-  inpbox: {
-    outline: "none",
-    background: "#000",
-    border: "none",
-    padding: "10px",
-    color: "#fff",
-    fontFamily: "Roboto",
-    flex: "1",
-  },
-  inputDetail: {
-    display: "flex",
-    justifyContent: "space-between",
-    flexWrap: "wrap",
-  },
-  inputText: {
-    display: "flex",
-    alignItems: "center",
-    flexWrap: "wrap",
   },
   text: {
     display: "flex",
@@ -60,35 +31,51 @@ const useStyles = makeStyles((theme) => ({
 export default function InputFields() {
   const classes = useStyles();
 
+  const [fromCoin, setFromCoin] = useState({ name: "Max BNB", value: 0 });
+  const [toCoin, setToCoin] = useState({ name: "PBIRD", value: 0 });
+
+  const onChangeHandler = (event) => {
+    console.log(event.target.name,toCoin.name)
+    if(event.target.name=== fromCoin.name){
+      setFromCoin({
+        ...fromCoin,
+        value: event.target.value,
+      });
+      return;
+    }
+    if (event.target.name === toCoin.name) {
+      setToCoin({
+        ...toCoin,
+        value: event.target.value,
+      });
+      return;
+    }
+  };
+
+  const switchHandler = () => {
+    setFromCoin(toCoin);
+    setToCoin(fromCoin);
+  };
   return (
     <>
       <br />
       <form className={classes.root} noValidate autoComplete="off">
-        <div className={classes.inputFiledBox}>
-          <span className={classes.inputDetail}>
-            {" "}
-            <label>From</label>
-            <label>Balance: 10</label>
-          </span>
-          <span className={classes.inputText}>
-            {" "}
-            <input className={classes.inpbox} />
-            <label>Max BNB</label>
-          </span>
-        </div>
-        <SwitchButton />
-        <div className={classes.inputFiledBox}>
-          <span className={classes.inputDetail}>
-            {" "}
-            <label>To(estimated)</label>
-            <label>Balance: 0</label>
-          </span>
-          <span className={classes.inputText}>
-            {" "}
-            <input className={classes.inpbox} />
-            <label>PBIRD</label>
-          </span>
-        </div>
+        <ExchangeInput
+          from={"From"}
+          balance={"10"}
+          coinName={fromCoin.name}
+          onchange={onChangeHandler}
+          value={fromCoin.value}
+        />
+
+        <SwitchButton onclick={switchHandler} />
+        <ExchangeInput
+          from={"To(estimated)"}
+          balance={"10"}
+          coinName={toCoin.name}
+          onchange={onChangeHandler}
+          value={toCoin.value}
+        />
         <span className={classes.text}>
           {" "}
           <label>Price </label>

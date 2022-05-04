@@ -10,7 +10,6 @@ const useStyles = makeStyles((theme) => ({
     display: "grid",
     padding: "0px 20px 0px 20px",
     fontFamily: "Roboto",
-    // width: "100%",
     borderRadius: "5px",
     border: "1px solid #fff",
     textAlign: "center",
@@ -22,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
     display: "grid",
     padding: "0px 20px 0px 20px",
     fontFamily: "Roboto",
-    // width: "100%",
     borderRadius: "5px",
     border: "1px solid #fff",
     textAlign: "center",
@@ -53,7 +51,6 @@ const useStyles = makeStyles((theme) => ({
   },
   pbirddDropdown: {
     display: "flex",
-    // flexWrap: "wrap",
     [theme.breakpoints.down("xs")]: {
       flexWrap: "wrap",
     },
@@ -62,7 +59,6 @@ const useStyles = makeStyles((theme) => ({
     outline: "none",
     background: "#000",
     border: "none",
-    // padding: "20px 10px",
     color: "#fff",
     fontFamily: "Roboto",
     padding: "30px 0px",

@@ -30,8 +30,6 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "10px",
     justifyContent: "space-between",
     "& > *": {
-      // margin: theme.spacing(1),
-      // width: theme.spacing(14.9),
       justifyContent: "space-between !important",
       flexBasis: "46%",
       height: theme.spacing(14.9),

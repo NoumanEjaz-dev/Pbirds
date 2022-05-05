@@ -37,7 +37,9 @@ const useStyles = makeStyles((theme) => ({
     padding: "20px 10px",
     color: "#fff",
     fontFamily: "Roboto",
-    flex: "1",
+    [theme.breakpoints.down("xs")]: {
+      width: "110px",
+    },
   },
   inputDetail: {
     display: "flex",
@@ -72,6 +74,9 @@ const useStyles = makeStyles((theme) => ({
     padding: "8px 70px",
     "&:hover": {
       backgroundColor: "#D09A0A",
+    },
+    [theme.breakpoints.down("xs")]: {
+      padding: "8px 45px",
     },
   },
 }));

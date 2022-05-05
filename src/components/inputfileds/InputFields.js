@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       background: theme.palette.common.yellow,
     },
+    [theme.breakpoints.down("xs")]: {
+      padding: "8px 35px",
+    },
   },
 }));
 

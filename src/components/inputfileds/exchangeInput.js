@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
     fontFamily: "Roboto",
     flex: "1",
+    [theme.breakpoints.down("xs")]: {
+      width: "110px",
+    },
   },
   inputDetail: {
     display: "flex",

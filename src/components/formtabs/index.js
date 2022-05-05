@@ -47,11 +47,24 @@ const useStyles = makeStyles((theme) => ({
     "& .MuiAppBar-root": {
       alignItems: "flex-end",
       backgroundColor: "transparent",
-      paddingRight: "12px"
+      paddingRight: "12px",
+      marginTop: "40px",
     },
     "& .MuiTabs-root": {
       backgroundColor: theme.palette.common.lightDark,
       width: "350px",
+      [theme.breakpoints.down("xs")]: {
+        width: "240px",
+      },
+      " & .MuiTab-textColorPrimary.Mui-selected": {
+        color: "#fff",
+      },
+      " & .PrivateTabIndicator-colorPrimary-9": {
+        backgroundColor: theme.palette.common.yellow,
+      },
+    },
+    " & .MuiTab-textColorPrimary": {
+      color: "#fff",
     },
   },
 
@@ -68,13 +81,14 @@ export default function FullWidthTabs() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
- 
+
   return (
     <>
-          <div className={classes.root}>
-           <Grid container> 
-           <Grid item xs={12} lg={3} ></Grid>
-           <Grid item xs={12} lg={6} ><AppBar position="static" color="default">
+      <div className={classes.root}>
+        <Grid container>
+          <Grid item xs={12} lg={3}></Grid>
+          <Grid item xs={12} lg={6}>
+            <AppBar position="static" color="default">
               <Tabs
                 value={value}
                 onChange={handleChange}
@@ -86,18 +100,19 @@ export default function FullWidthTabs() {
                 <Tab label="Item One" {...a11yProps(0)} />
                 <Tab label="Item Two" {...a11yProps(1)} />
               </Tabs>
-            </AppBar></Grid>
-           <Grid item xs={12} lg={3} ></Grid>
-           </Grid>
-            <div className={classes.formsContainer}>
-              <TabPanel value={value} index={0} dir={theme.direction}>
-                <SwapForm />
-              </TabPanel>
-              <TabPanel value={value} index={1} dir={theme.direction}>
-                <TransferForm />
-              </TabPanel>
-            </div>
-          </div>
+            </AppBar>
+          </Grid>
+          <Grid item xs={12} lg={3}></Grid>
+        </Grid>
+        <div className={classes.formsContainer}>
+          <TabPanel value={value} index={0} dir={theme.direction}>
+            <SwapForm />
+          </TabPanel>
+          <TabPanel value={value} index={1} dir={theme.direction}>
+            <TransferForm />
+          </TabPanel>
+        </div>
+      </div>
     </>
   );
 }

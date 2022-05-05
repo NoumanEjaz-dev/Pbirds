@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: "5px",
+    marginLeft: "35px",
   },
 }));
 

@@ -28,6 +28,9 @@ const useStyles = makeStyles((theme) =>
       lineHeight: "30px",
       padding: "48px",
     },
+    gridContainerCards: {
+      marginTop: "10px",
+    },
   })
 );
 
@@ -51,7 +54,7 @@ const RewardPage = () => {
           </Grid>
         </Grid>
         {/*  */}
-        <Grid container spacing={2}>
+        <Grid container spacing={2} className={classes.gridContainerCards}>
           <Grid
             className={classes.cardItem}
             item

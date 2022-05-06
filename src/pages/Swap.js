@@ -1,9 +1,8 @@
-import MainCard from "../components/box/MainCard";
+import SimpleTabs from "../components/formtabs";
 const SwapPage = () => {
   return (
     <>
-      <h1>SwapdPage</h1>
-      <MainCard />
+      <SimpleTabs />
     </>
   );
 };

@@ -4,8 +4,6 @@ import Chartist from "chartist";
 const ChartGraph = () => {
   var delays = 80,
     durations = 500;
-  var delays2 = 80,
-    durations2 = 500;
 
   const dailySalesChart = {
     data: {
@@ -26,7 +24,7 @@ const ChartGraph = () => {
               "Dec",
             ]
           : ["J", "F", "M", "A", "M", "J", "F", "A", "S", "O", "N", "D"],
-      series: [[12, 17, 7, 17, 23, 18, 38, 5, 10, 16, , 7]],
+      series: [[12, 17, 7, 17, 23, 18, 38, 5, 10, 16, 7]],
     },
     options: {
       lineSmooth: Chartist.Interpolation.cardinal({
@@ -73,7 +71,6 @@ const ChartGraph = () => {
     },
   };
 
-  var type = "Bar";
   return (
     <div style={{ background: "#111111" }}>
       <ChartistGraph

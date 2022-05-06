@@ -19,14 +19,14 @@ const useStyles = makeStyles((theme) =>
     },
     JoinCommunityText: {
       fontFamily: "Roboto",
-      fontSize: "12px",
+      fontSize: "17px",
       color: theme.palette.common.white,
     },
     JoinButton: {
       backgroundColor: "#2B2B2B",
       borderRadius: "10px",
       color: theme.palette.common.white,
-      marginTop: "8px",
+      marginTop: "10px",
       width: "100%",
     },
   })

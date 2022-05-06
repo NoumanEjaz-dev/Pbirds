@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) =>
       fontFamily: "Roboto",
       fontSize: "12px",
       color: theme.palette.common.white,
-      // margin: "9px",
     },
     JoinButton: {
       backgroundColor: "#2B2B2B",

@@ -7,7 +7,6 @@ const useStyles = makeStyles((theme) => ({
     display: "grid",
     padding: "10px 20px 0px 20px",
     fontFamily: "Roboto",
-    // width: "100%",
     borderRadius: "5px",
     border: "1px solid #fff",
     textAlign: "center",

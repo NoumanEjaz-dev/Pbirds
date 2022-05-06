@@ -71,6 +71,11 @@ const useStyles = makeStyles((theme) => ({
   formsContainer: {
     width: "100%",
   },
+  tabButton: {
+    "&:hover": {
+      borderBottom: "2px solid #D09A0A",
+    },
+  },
 }));
 
 export default function FullWidthTabs() {
@@ -85,20 +90,28 @@ export default function FullWidthTabs() {
   return (
     <>
       <div className={classes.root}>
-        <Grid container>
+        <Grid container spacing={1}>
           <Grid item xs={12} lg={3}></Grid>
           <Grid item xs={12} lg={6}>
             <AppBar position="static" color="default">
               <Tabs
                 value={value}
                 onChange={handleChange}
-                indicatorColor="primary"
+                indicatorColor="false"
                 textColor="primary"
                 variant="fullWidth"
                 aria-label="full width tabs example"
               >
-                <Tab label="Item One" {...a11yProps(0)} />
-                <Tab label="Item Two" {...a11yProps(1)} />
+                <Tab
+                  className={classes.tabButton}
+                  label="Item One"
+                  {...a11yProps(0)}
+                />
+                <Tab
+                  className={classes.tabButton}
+                  label="Item Two"
+                  {...a11yProps(1)}
+                />
               </Tabs>
             </AppBar>
           </Grid>

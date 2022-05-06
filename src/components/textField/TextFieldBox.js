@@ -50,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     flexWrap: "wrap",
+    justifyContent: "space-between",
   },
   pbirddDropdown: {
     display: "flex",

@@ -45,7 +45,7 @@ export default function SwapForm() {
 
   return (
     <>
-      <Grid container>
+      <Grid container spacing={1}>
         <Grid item xs={12} lg={3} spacing={3}></Grid>
         <Grid item xs={12} lg={6}>
           <div className={classes.SwapFormContainer}>

@@ -7,8 +7,8 @@ const useStyles = makeStyles((theme) => ({
   toggalButton: {
     background: theme.palette.common.yellow,
     color: theme.palette.common.white,
-    width: "35px",
-    height: "35px",
+    width: "22px",
+    height: "22px",
     "&:hover": {
       background: theme.palette.common.yellow,
     },

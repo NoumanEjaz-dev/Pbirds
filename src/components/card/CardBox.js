@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   paperBox: {
     display: "flex",
     flexWrap: "wrap",
-    paddingTop: "10px",
+    paddingTop: "30px",
     justifyContent: "space-between",
     "& > *": {
       justifyContent: "space-between !important",

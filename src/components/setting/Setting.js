@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
   settingMenu: {
     display: "flex",
     justifyContent: "space-between",
+    fontSize: "12px",
   },
   settingPopUp: {
     width: "300px",
@@ -36,10 +37,13 @@ const useStyles = makeStyles((theme) => ({
     width: "40px",
     height: "12px",
     alignItems: "center",
-    padding: "8px",
+    padding: "5px",
     borderRadius: "15%",
     justifyContent: "space-evenly",
     border: "2px solid #D09A0A",
+  },
+  SettingOptions: {
+    fontSize: "15px",
   },
 }));
 
@@ -115,7 +119,12 @@ export default function Setting() {
                       <MenuItem onClick={handleClose}>Go Back</MenuItem>
                     </div>
                     <div className={classes.settingMenu}>
-                      <MenuItem onClick={handleClose}>Settings</MenuItem>
+                      <MenuItem
+                        className={classes.SettingOptions}
+                        onClick={handleClose}
+                      >
+                        Settings
+                      </MenuItem>
                       <MenuItem onClick={handleClose}>
                         <span className={classes.settingBox}>
                           <p>1</p>
@@ -124,13 +133,23 @@ export default function Setting() {
                       </MenuItem>
                     </div>
                     <div className={classes.settingMenu}>
-                      <MenuItem onClick={handleClose}>AutoTax</MenuItem>
+                      <MenuItem
+                        className={classes.SettingOptions}
+                        onClick={handleClose}
+                      >
+                        AutoTax
+                      </MenuItem>
                       <MenuItem onClick={handleClose}>
                         <CheckboxButton />
                       </MenuItem>
                     </div>
                     <div className={classes.settingMenu}>
-                      <MenuItem onClick={handleClose}>Max Auto-Tax</MenuItem>
+                      <MenuItem
+                        className={classes.SettingOptions}
+                        onClick={handleClose}
+                      >
+                        Max Auto-Tax
+                      </MenuItem>
                       <MenuItem onClick={handleClose}>
                         {" "}
                         <span className={classes.settingBox}>
@@ -140,7 +159,10 @@ export default function Setting() {
                       </MenuItem>
                     </div>
                     <div className={classes.settingMenu}>
-                      <MenuItem onClick={handleClose}>
+                      <MenuItem
+                        className={classes.SettingOptions}
+                        onClick={handleClose}
+                      >
                         Route Refresh Time
                       </MenuItem>
                       <MenuItem onClick={handleClose}>
@@ -152,7 +174,12 @@ export default function Setting() {
                       </MenuItem>
                     </div>
                     <div className={classes.settingMenu}>
-                      <MenuItem onClick={handleClose}>Multi Tx</MenuItem>
+                      <MenuItem
+                        className={classes.SettingOptions}
+                        onClick={handleClose}
+                      >
+                        Multi Tx
+                      </MenuItem>
                       <MenuItem onClick={handleClose}>
                         {" "}
                         <span className={classes.settingBox}>
@@ -162,7 +189,10 @@ export default function Setting() {
                       </MenuItem>
                     </div>
                     <div className={classes.settingMenu}>
-                      <MenuItem onClick={handleClose}>
+                      <MenuItem
+                        className={classes.SettingOptions}
+                        onClick={handleClose}
+                      >
                         Show Swap Loading
                       </MenuItem>
                       <MenuItem onClick={handleClose}>
@@ -171,7 +201,12 @@ export default function Setting() {
                       </MenuItem>
                     </div>
                     <div className={classes.settingMenu}>
-                      <MenuItem onClick={handleClose}>Friendly Errors</MenuItem>
+                      <MenuItem
+                        className={classes.SettingOptions}
+                        onClick={handleClose}
+                      >
+                        Friendly Errors
+                      </MenuItem>
                       <MenuItem onClick={handleClose}>
                         {" "}
                         <CheckboxButton />
